@@ -1,0 +1,24 @@
+.Title-Ed{
+    font-weight:700;
+    text-decoration:underline;
+    margin-top: 4rem; 
+    color:blue;  
+}
+div{
+    height:auto;
+    padding-top: 0.1rem;
+    padding-bottom: 0.1rem;
+}
+div #Title{
+    justify-content:center;
+}
+div #Plus{
+    height:auto;
+}
+div #buttons{
+    justify-content:flex-end;
+}
+.text{
+    overflow-wrap:break-word;
+    color:green
+}
