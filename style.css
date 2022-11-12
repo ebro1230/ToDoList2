@@ -15,8 +15,11 @@ div #Title{
 div #Plus{
     height:auto;
 }
-div #buttons{
+div.buttons{
     justify-content:flex-end;
+}
+.btn{
+    margin:0.1rem;
 }
 .text{
     overflow-wrap:break-word;

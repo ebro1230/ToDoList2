@@ -1,29 +1,40 @@
+let i = 0;
+const addTask = () => {
+    i++;
+    createDiv(i);
 
- let i = 0;
-document.querySelector('#Plus').addEventListener('click', () => {
-    i = i + 1;
-    let newTaskId = i.toString()
+}
+const createDiv = (i) => {
     const newTask = document.createElement('div');
-    newTask.classList.add('row');
-    newTask.setAttribute('id',newTaskId);
-    newTask.innerHTML = '<div class="form-group col-xl-10 col-lg-8 col-med-8 col-sm-8"> <input type="text" class="form-control-plaintext" placeholder="New Task"></div> <div class="col" id="buttons"> <button type="button" class="btn btn-success" id="Confirm-Button">Confirm</button> <button type="button" class="btn btn-danger">Delete</button></div>';
-    const tasks = document.getElementById('tasks');
-    tasks.appendChild(newTask);
-
     const inputArea = document.createElement('div');
-    inputArea.classList.add('form-group col-xl-10 col-lg-8 col-med-8 col-sm-8');
-    const userInput = document.getElementById(newTaskId);
-    userInput.appendChild(inputArea);
-
-    const addButtons = document.createElement('div');
-    addButtons.classList.add('col');
-    addButtons.innerHTML = '<button type="button" class="btn btn-success">Confirm</button> <button type="button" class="btn btn-danger">Delete</button>';
-    const buttons = document.getElementById(newTaskId);
-    buttons.appendChild(addButtons);
-});
-document.querySelector('#Confirm-Button').addEventListener('click', () => {
-    const buttonChange = document.getElementById('Confirm-Button');
-    buttonChange.setAttribute('class','btn btn-secondary');
-    buttonChange.innerText = "Edit";
-    console.log("hi");
-});
+    const inputText = document.createElement('input');
+    const buttonArea = document.createElement('div');
+    const confirmButton = document.createElement('button');
+    const deleteButton = document.createElement('button');
+    newTask.classList.add('row');
+    inputArea.classList.add('form-group');
+    inputArea.classList.add('col-xl-10');
+    inputArea.classList.add('col-lg-8');
+    inputArea.classList.add('col-med-8');
+    inputArea.classList.add('col-sm-8');
+    inputText.classList.add("form-control-plaintext");
+    buttonArea.classList.add('col');
+    buttonArea.classList.add('buttons');
+    confirmButton.classList.add("btn");
+    confirmButton.classList.add("btn-success");
+    deleteButton.classList.add('btn');
+    deleteButton.classList.add('btn-danger');
+    confirmButton.innerHTML = "Confirm";
+    deleteButton.innerHTML = "Delete";
+    inputText.setAttribute('type', 'text');
+    inputText.setAttribute('placeholder', "New Text");
+    confirmButton.setAttribute('type','button');
+    deleteButton.setAttribute('type','button');
+    newTask.setAttribute('id', i);;
+    inputArea.appendChild(inputText);
+    buttonArea.appendChild(confirmButton);
+    buttonArea.appendChild(deleteButton);
+    newTask.appendChild(inputArea);
+    newTask.appendChild(buttonArea);
+    document.getElementById('tasks').appendChild(newTask);
+}
