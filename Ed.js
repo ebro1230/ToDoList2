@@ -54,7 +54,7 @@ let i = 0;
             const inputText = document.createElement('input');
             inputText.classList.add("form-control-plaintext");
             inputText.setAttribute('type', 'text');
-            inputText.setAttribute('placeholder', "New Text");
+            inputText.setAttribute('placeholder', "New Task");
             inputText.setAttribute('id', 'it'+i);
 
             const buttonArea = document.createElement('div');
