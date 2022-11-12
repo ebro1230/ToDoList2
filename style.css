@@ -6,8 +6,7 @@
 }
 div{
     height:auto;
-    padding-top: 0.1rem;
-    padding-bottom: 0.1rem;
+
 }
 div #Title{
     justify-content:center;
@@ -24,4 +23,13 @@ div.buttons{
 .text{
     overflow-wrap:break-word;
     color:green
+}
+body {
+    background-image: url(Background.jpg);
+    background-size: cover;
+}
+.form-check-input{
+    height:auto;
+    padding: 0.7rem;
+
 }

@@ -42,10 +42,15 @@ let i = 0;
             const newTask = document.createElement('div');
             newTask.classList.add('row');
             newTask.setAttribute('id', i);
+            
+            const checkBoxArea = document.createElement('div');
+            checkBoxArea.classList.add('col2');
+            checkBoxArea.classList.add('form-check');
+            checkBoxArea.setAttribute('id', 'cBA'+i);
 
             const inputArea = document.createElement('div');
             inputArea.classList.add('form-group');
-            inputArea.classList.add('col-xl-10');
+            inputArea.classList.add('col-xl-8');
             inputArea.classList.add('col-lg-8');
             inputArea.classList.add('col-med-8');
             inputArea.classList.add('col-sm-8');
@@ -78,12 +83,20 @@ let i = 0;
             deleteButton.setAttribute('onclick', "deleteTask()");
             deleteButton.setAttribute('id', 'db'+i);
 
+            const checkButton = document.createElement('button')
+            checkButton.classList.add('form-check-input');
+            checkButton.setAttribute('type', 'checkbox');
+            checkButton.setAttribute('id', "flexCheckDefault");
+            checkButton.setAttribute('value', "");
+
             const buttonDisable = document.querySelector(".btn-dark");
             buttonDisable.setAttribute('disabled',"");
 
+            checkBoxArea.appendChild(checkButton);
             inputArea.appendChild(inputText);
             buttonArea.appendChild(confirmButton);
             buttonArea.appendChild(deleteButton);
+            newTask.appendChild(checkBoxArea);
             newTask.appendChild(inputArea);
             newTask.appendChild(buttonArea);
             document.getElementById('tasks').appendChild(newTask);
