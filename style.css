@@ -28,8 +28,13 @@ body {
     background-image: url(Background.jpg);
     background-size: cover;
 }
-.form-check-input{
-    height:auto;
-    padding: 0.7rem;
-
+input[type=checkbox]
+{
+  /* Double-sized Checkboxes */
+  -ms-transform: scale(2); /* IE */
+  -moz-transform: scale(2); /* FF */
+  -webkit-transform: scale(2); /* Safari and Chrome */
+  -o-transform: scale(2); /* Opera */
+  padding: 10px;
+  margin-top:0.8rem;
 }

@@ -7,14 +7,25 @@ let i = 0;
             const buttonChange = document.getElementById("cb"+num);
             buttonChange.classList.replace('btn-success', 'btn-secondary');
             buttonChange.innerHTML = 'Edit';
-            buttonChange.setAttribute('onclick', "editTask()");
             const textChange = document.getElementById("it"+num);
             textChange.setAttribute('readonly',"");
             const buttonEnable = document.querySelector(".btn-dark");
             buttonEnable.removeAttribute('disabled',"");
             document.querySelectorAll('button.btn-secondary').forEach(elem => {
-               elem.disabled = false;
+               let editButtonId = elem.id;
+               console.log(editButtonId);
+               let num = editButtonId.charAt(editButtonId.length-1);
+               console.log(num);
+               if(document.getElementById("cbb"+num).checked === false) {
+                elem.disabled = false;
+               }
+               else{
+                elem.disabled = true;
+               }
             });
+            document.querySelectorAll('.form-check-input').forEach(elem => {
+                elem.disabled = false;
+             });
         }
         else if (e.target.innerHTML === 'Edit') {
             let buttonId = "cb"+num;
@@ -22,10 +33,12 @@ let i = 0;
             const buttonChange2 = document.getElementById(buttonId);
             buttonChange2.classList.replace('btn-secondary', 'btn-success');
             buttonChange2.innerHTML = 'Confirm';
-            buttonChange2.setAttribute('onclick', "confirmTask()");
             const textChange2 = document.getElementById(inputTextId);
             textChange2.removeAttribute('readonly',"");
             document.querySelectorAll('button.btn-secondary').forEach(elem => {
+                elem.disabled = true;
+            });
+            document.querySelectorAll('.form-check-input').forEach(elem => {
                 elem.disabled = true;
             });
             const buttonDisable = document.querySelector(".btn-dark");
@@ -72,7 +85,6 @@ let i = 0;
             confirmButton.classList.add("btn-success");
             confirmButton.innerHTML = "Confirm";
             confirmButton.setAttribute('type','button');
-            confirmButton.setAttribute('onclick', "confirmTask()");
             confirmButton.setAttribute('id', 'cb'+i);
 
             const deleteButton = document.createElement('button');
@@ -80,14 +92,14 @@ let i = 0;
             deleteButton.classList.add('btn-danger');
             deleteButton.innerHTML = "Delete";
             deleteButton.setAttribute('type','button');
-            deleteButton.setAttribute('onclick', "deleteTask()");
             deleteButton.setAttribute('id', 'db'+i);
 
-            const checkButton = document.createElement('button')
+            const checkButton = document.createElement('input')
             checkButton.classList.add('form-check-input');
             checkButton.setAttribute('type', 'checkbox');
-            checkButton.setAttribute('id', "flexCheckDefault");
+            checkButton.setAttribute('id', 'cbb'+i);
             checkButton.setAttribute('value', "");
+            checkButton.setAttribute('disabled', "");
 
             const buttonDisable = document.querySelector(".btn-dark");
             buttonDisable.setAttribute('disabled',"");
@@ -104,11 +116,28 @@ let i = 0;
             document.querySelectorAll('button.btn-secondary').forEach(elem => {
                 elem.disabled = true;
             });
+            document.querySelectorAll('.form-check-input').forEach(elem => {
+                elem.disabled = true;
+             });
+        }
+        else if (e.target.type === "checkbox") {
+            const textChange = document.getElementById("it"+num);
+            const firstButton = document.getElementById("cb"+num);
+            if (e.target.checked) {
+                console.log(textChange);
+                textChange.style.textDecoration = "line-through";
+                textChange.style.fontStyle = "italic";
+                firstButton.setAttribute('disabled',"");
+            }
+            else{
+                textChange.style.fontStyle = "normal";
+                textChange.style.textDecoration = "none";
+                firstButton.removeAttribute('disabled',"");
+            }
+            
+            console.log(e.target.checked);
         }
     });
-const confirmTask = () => {}
-const editTask = () => {}
-const deleteTask = () => {}
-const addTask = () => {}
+
     
 
