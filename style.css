@@ -1,0 +1,28 @@
+/* Groceries list*/
+
+.groceries-list-title {
+  text-align: center;
+  margin: 20px auto 50px;
+}
+
+.groceries-form {
+  margin-bottom: 50px;
+}
+
+.groceries-task-list {
+  width: 60%;
+}
+
+.groceries-task,
+.groceries-edit-button,
+.groceries-delete-button {
+  appearance: none;
+  border: none;
+  outline: none;
+  background: none;
+}
+
+.groceries-edit-button:hover,
+.groceries-delete-button:hover {
+  font-weight: bold;
+}
