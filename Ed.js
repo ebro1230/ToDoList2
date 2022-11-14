@@ -13,9 +13,7 @@ let i = 0;
             buttonEnable.removeAttribute('disabled',"");
             document.querySelectorAll('button.btn-secondary').forEach(elem => {
                let editButtonId = elem.id;
-               console.log(editButtonId);
                let num = editButtonId.charAt(editButtonId.length-1);
-               console.log(num);
                if(document.getElementById("cbb"+num).checked === false) {
                 elem.disabled = false;
                }
@@ -126,18 +124,19 @@ let i = 0;
             const textChange = document.getElementById("it"+num);
             const firstButton = document.getElementById("cb"+num);
             if (e.target.checked) {
-                console.log(textChange);
                 textChange.style.textDecoration = "line-through";
                 textChange.style.fontStyle = "italic";
                 firstButton.setAttribute('disabled',"");
+                textChange.style.color = "grey";
+                textChange.style.opacity = 0.7;
             }
             else{
                 textChange.style.fontStyle = "normal";
                 textChange.style.textDecoration = "none";
                 firstButton.removeAttribute('disabled',"");
+                textChange.style.color = "black";
+                textChange.style.opacity = 1;
             }
-            
-            console.log(e.target.checked);
         }
     });
 
