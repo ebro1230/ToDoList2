@@ -57,16 +57,14 @@ let i = 0;
             newTask.setAttribute('id', i);
             
             const checkBoxArea = document.createElement('div');
-            checkBoxArea.classList.add('col2');
+            checkBoxArea.classList.add('col-1');
             checkBoxArea.classList.add('form-check');
             checkBoxArea.setAttribute('id', 'cBA'+i);
 
             const inputArea = document.createElement('div');
             inputArea.classList.add('form-group');
-            inputArea.classList.add('col-xl-8');
-            inputArea.classList.add('col-lg-8');
-            inputArea.classList.add('col-med-8');
-            inputArea.classList.add('col-sm-8');
+
+            inputArea.classList.add('col-7');
             inputArea.setAttribute('id', 'iA'+i);
 
             const inputText = document.createElement('input');
@@ -76,7 +74,11 @@ let i = 0;
             inputText.setAttribute('id', 'it'+i);
 
             const buttonArea = document.createElement('div');
-            buttonArea.classList.add('col');
+            buttonArea.classList.add('col-xl-3');
+            buttonArea.classList.add('col-lg-3');
+            buttonArea.classList.add('col-md-4');
+            buttonArea.classList.add('col-sm-5');
+            buttonArea.classList.add('col-5');
             buttonArea.classList.add('buttons');
             buttonArea.setAttribute('id', 'bA'+i);
 

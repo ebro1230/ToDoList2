@@ -6,6 +6,8 @@
 }
 div{
     height:auto;
+    padding-left: 1rem;
+
 
 }
 div #Title{
@@ -13,6 +15,7 @@ div #Title{
 }
 div #Plus{
     height:auto;
+    padding-left: 2rem;
 }
 div.buttons{
     justify-content:flex-end;
