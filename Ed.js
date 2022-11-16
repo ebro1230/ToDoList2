@@ -5,13 +5,13 @@ let i = 0;
         let num = elementId.charAt(elementId.length-1);
         if (e.target.innerHTML === 'Confirm'){
             const buttonChange = document.getElementById("cb"+num);
-            buttonChange.classList.replace('btn-success', 'btn-secondary');
+            buttonChange.classList.replace('btn-success', 'btn-primary');
             buttonChange.innerHTML = 'Edit';
             const textChange = document.getElementById("it"+num);
             textChange.setAttribute('readonly',"");
             const buttonEnable = document.querySelector(".btn-dark");
             buttonEnable.removeAttribute('disabled',"");
-            document.querySelectorAll('button.btn-secondary').forEach(elem => {
+            document.querySelectorAll('button.btn-primary').forEach(elem => {
                let editButtonId = elem.id;
                let num = editButtonId.charAt(editButtonId.length-1);
                if(document.getElementById("cbb"+num).checked === false) {
@@ -29,11 +29,11 @@ let i = 0;
             let buttonId = "cb"+num;
             let inputTextId = "it"+num;
             const buttonChange2 = document.getElementById(buttonId);
-            buttonChange2.classList.replace('btn-secondary', 'btn-success');
+            buttonChange2.classList.replace('btn-primary', 'btn-success');
             buttonChange2.innerHTML = 'Confirm';
             const textChange2 = document.getElementById(inputTextId);
             textChange2.removeAttribute('readonly',"");
-            document.querySelectorAll('button.btn-secondary').forEach(elem => {
+            document.querySelectorAll('button.btn-primary').forEach(elem => {
                 elem.disabled = true;
             });
             document.querySelectorAll('.form-check-input').forEach(elem => {
@@ -63,6 +63,8 @@ let i = 0;
             inputArea.classList.add('form-group');
 
             inputArea.classList.add('col-7');
+            inputArea.classList.add('col-md-8');
+            inputArea.classList.add('col-lg-8');
             inputArea.setAttribute('id', 'iA'+i);
 
             const inputText = document.createElement('input');
@@ -74,9 +76,9 @@ let i = 0;
             const buttonArea = document.createElement('div');
             buttonArea.classList.add('col-xl-3');
             buttonArea.classList.add('col-lg-3');
-            buttonArea.classList.add('col-md-4');
-            buttonArea.classList.add('col-sm-5');
-            buttonArea.classList.add('col-5');
+            buttonArea.classList.add('col-md-3');
+            buttonArea.classList.add('col-sm-4');
+            buttonArea.classList.add('col-6');
             buttonArea.classList.add('buttons');
             buttonArea.setAttribute('id', 'bA'+i);
 
