@@ -2,7 +2,7 @@
 const inputedTask = document.getElementById("groceries-input");
 
 inputedTask.addEventListener("input", () => {
-  const inputButton = document.querySelector("#addItemButton");
+  const inputButton = document.querySelector("#g-addItemButton");
   inputButton.disabled = false;
 });
 
@@ -13,28 +13,30 @@ form.addEventListener("submit", (e) => {
 
 /* Adding a task from the form */
 
-const addItemButton = document.querySelector("#addItemButton");
-const toDoList = document.querySelector(".todo-list");
+const addItemButton = document.querySelector("#g-addItemButton");
+const toDoList = document.querySelector(".g-todo-list");
 
 addItemButton.addEventListener("click", (e) => {
   e.preventDefault();
 
   const toDoDiv = document.createElement("div");
-  toDoDiv.classList.add("todo");
+  toDoDiv.classList.add("g-todo");
 
   const newToDo = document.createElement("li");
   newToDo.innerHTML = inputedTask.value;
-  newToDo.classList.add("todo-item");
+  newToDo.classList.add("g-todo-item");
+  newToDo.style.textDecoration = "none";
   toDoDiv.appendChild(newToDo);
 
   const editButton = document.createElement("button");
   editButton.innerHTML = "Edit";
-  editButton.classList.add("edit-button");
+  editButton.classList.add("g-edit-button");
   toDoDiv.appendChild(editButton);
 
   const deleteButton = document.createElement("button");
   deleteButton.innerHTML = "Delete";
-  deleteButton.classList.add("delete-button");
+  deleteButton.classList.add("g-delete-button");
+  editButton.style.backgroundColor = "green";
   toDoDiv.appendChild(deleteButton);
 
   toDoList.appendChild(toDoDiv);
@@ -47,10 +49,12 @@ addItemButton.addEventListener("click", (e) => {
       newToDo.contentEditable = true;
       newToDo.focus();
       editButton.innerText = "Save";
+      editButton.style.backgroundColor = "yellow";
       newToDo.style.textDecoration = "none";
     } else {
       newToDo.contentEditable = false;
       editButton.innerText = "Edit";
+      editButton.style.backgroundColor = "green";
     }
   });
 

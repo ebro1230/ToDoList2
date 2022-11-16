@@ -1,5 +1,9 @@
 /* Groceries list*/
 
+body {
+  background-color: yellow;
+}
+
 .groceries-list-title {
   text-align: center;
   margin: 20px auto 50px;
