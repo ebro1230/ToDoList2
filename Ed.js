@@ -61,17 +61,19 @@ let i = 0;
 
             const inputArea = document.createElement('div');
             inputArea.classList.add('form-group');
-
-            inputArea.classList.add('col-7');
+            inputArea.classList.add('col-10');
+            inputArea.classList.add('col-sm-11');
             inputArea.classList.add('col-md-8');
             inputArea.classList.add('col-lg-8');
             inputArea.setAttribute('id', 'iA'+i);
 
-            const inputText = document.createElement('input');
-            inputText.classList.add("form-control-plaintext");
+            const inputText = document.createElement('textarea');
+            inputText.classList.add("form-control");
             inputText.setAttribute('type', 'text');
             inputText.setAttribute('placeholder', "New Task");
             inputText.setAttribute('id', 'it'+i);
+            inputText.classList.add('text-wrap');
+            inputText.classList.add("rows","1");
 
             const buttonArea = document.createElement('div');
             buttonArea.classList.add('col-xl-3');
