@@ -1,5 +1,4 @@
 let i = 0;
-
     document.addEventListener('click', (e) => {
         let elementId = e.target.id;
         let num = elementId.charAt(elementId.length-1);
@@ -41,6 +40,32 @@ let i = 0;
             });
             const buttonDisable = document.querySelector(".btn-dark");
             buttonDisable.setAttribute('disabled',"");
+            const input = document.getElementById('it'+num);
+            input.addEventListener("keypress", function(event) {
+                if (event.key === "Enter") {
+                    event.preventDefault();
+                    const buttonChange = document.getElementById("cb"+num);
+                    buttonChange.classList.replace('btn-success', 'btn-primary');
+                    buttonChange.innerHTML = 'Edit';
+                    const textChange = document.getElementById("it"+num);
+                    textChange.setAttribute('readonly',"");
+                    const buttonEnable = document.querySelector(".btn-dark");
+                    buttonEnable.removeAttribute('disabled',"");
+                    document.querySelectorAll('button.btn-primary').forEach(elem => {
+                       let editButtonId = elem.id;
+                       let num = editButtonId.charAt(editButtonId.length-1);
+                       if(document.getElementById("cbb"+num).checked === false) {
+                        elem.disabled = false;
+                       }
+                       else {
+                            elem.disabled = true;
+                       }
+                    });
+                    document.querySelectorAll('.form-check-input').forEach(elem => {
+                        elem.disabled = false;
+                    });
+                }
+            });
         }
         else if (e.target.innerHTML === 'Delete') {
             const deleteTask = document.getElementById(num);
@@ -122,7 +147,33 @@ let i = 0;
             });
             document.querySelectorAll('.form-check-input').forEach(elem => {
                 elem.disabled = true;
-             });
+            });
+            const input = document.getElementById('it'+i);
+            input.addEventListener("keypress", function(event) {
+                if (event.key === "Enter") {
+                    event.preventDefault();
+                    const buttonChange = document.getElementById("cb"+i);
+                    buttonChange.classList.replace('btn-success', 'btn-primary');
+                    buttonChange.innerHTML = 'Edit';
+                    const textChange = document.getElementById("it"+i);
+                    textChange.setAttribute('readonly',"");
+                    const buttonEnable = document.querySelector(".btn-dark");
+                    buttonEnable.removeAttribute('disabled',"");
+                    document.querySelectorAll('button.btn-primary').forEach(elem => {
+                       let editButtonId = elem.id;
+                       let num = editButtonId.charAt(editButtonId.length-1);
+                       if(document.getElementById("cbb"+num).checked === false) {
+                        elem.disabled = false;
+                       }
+                       else {
+                            elem.disabled = true;
+                       }
+                    });
+                    document.querySelectorAll('.form-check-input').forEach(elem => {
+                        elem.disabled = false;
+                    });
+                }
+            });
         }
         else if (e.target.type === "checkbox") {
             const textChange = document.getElementById("it"+num);
@@ -143,6 +194,7 @@ let i = 0;
             }
         }
     });
+
 
     
 
