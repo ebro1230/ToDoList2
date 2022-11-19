@@ -1,53 +1,47 @@
-
-.Title-Ed{
-    font-weight:700px;
-    margin-top: 4rem; 
-    color:black;
-    border: none; 
-    font-family: 'Dancing Script', serif, cursive;
-    font-size:4rem; 
+.Title-Ed {
+  font-weight: 700px;
+  margin-top: 4rem;
+  color: black;
+  border: none;
+  font-family: "Dancing Script", serif, cursive;
+  font-size: 4rem;
 }
-div{
-    height:auto;
-    padding-left: 1rem;
-
-
-
+div {
+  height: auto;
+  padding-left: 1rem;
 }
 div #tasks {
-    display:flex;
+  display: flex;
 }
-div #Title{
-    justify-content:center;
+div #Title {
+  justify-content: center;
 }
-div #Plus{
-    height:auto;
-    padding-left: 2rem;
-    padding-top: 0.6rem;
-    padding-bottom: 0.6rem;
+div #Plus {
+  height: auto;
+  padding-left: 2rem;
+  padding-top: 0.6rem;
+  padding-bottom: 0.6rem;
 }
-div.buttons{
-    display:flex;
-    justify-content:flex-start;
-    padding-left:1.1rem;
-    margin-left:0;
-
+div.buttons {
+  display: flex;
+  justify-content: flex-start;
+  padding-left: 1.1rem;
+  margin-left: 0;
 }
-.btn{
-    margin-right:0.1rem;
-    margin-top:0.6rem;
-    margin-bottom: 0.6rem;
-    justify-content:flex-end;
+.btn {
+  margin-right: 0.1rem;
+  margin-top: 0.6rem;
+  margin-bottom: 0.6rem;
+  justify-content: flex-end;
 }
-.text{
-    overflow-wrap:break-word;
-    color:green
+.text {
+  overflow-wrap: break-word;
+  color: green;
 }
 body.EdBody {
-    background-color: rgb(255, 255, 136) !important;
+  background-color: rgb(255, 255, 136) !important;
 }
-input[type=checkbox]
-{
+input[type="checkbox"] {
   /* Double-sized Checkboxes */
   -ms-transform: scale(2); /* IE */
   -moz-transform: scale(2); /* FF */
@@ -55,50 +49,51 @@ input[type=checkbox]
   -o-transform: scale(2); /* Opera */
   padding-bottom: 1.2rem !important;
   margin-bottom: 1.2rem !important;
-  align-self:stretch !important;
-
+  align-self: stretch !important;
 }
 .row {
-    border-bottom-color: rgb(29, 185, 237);
-    border-left-color: rgb(255, 83, 83);
-    border-bottom-style: solid;
-    border-bottom-width: 0.2rem;
-    border-left-style: double;
-    border-left-width: 0.2rem;
-    align-items: center;
-    display:flex;
+  border-bottom-color: rgb(29, 185, 237);
+  border-left-color: rgb(255, 83, 83);
+  border-bottom-style: solid;
+  border-bottom-width: 0.2rem;
+  border-left-style: double;
+  border-left-width: 0.2rem;
+  align-items: center;
+  display: flex;
 }
 .form-control {
-    overflow-wrap: wrap;
-    flex-wrap: wrap;
-    overflow:auto;
-    margin-top: 1.2rem;
-    height:100%;
+  overflow-wrap: wrap;
+  flex-wrap: wrap;
+  overflow: auto;
+  margin-top: 1.2rem;
+  height: 100%;
 }
-textarea{
-    height: 2.5rem !important;
+textarea {
+  height: 2.5rem !important;
 }
 input {
-    align-items: center;
-    flex-wrap: wrap;
-    overflow:scroll;
+  align-items: center;
+  flex-wrap: wrap;
+  overflow: scroll;
 }
 .form-check {
-    padding:0;
-    margin:0;
-    display:flex;
-    justify-content: center;
-    align-items:center;
-    padding-bottom: 1.4rem;
-    padding-left: 2.5rem;
-    padding-top: 0.2rem;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 1.4rem;
+  padding-left: 2.5rem;
+  padding-top: 0.2rem;
 }
 [id^="it"] {
-    background: rgba(255, 255, 255, 0);
-    border: rgba(255, 255, 255, 0);
+  background: rgba(255, 255, 255, 0);
+  border: rgba(255, 255, 255, 0);
 }
-.form-control[disabled], .form-control[readonly], fieldset[disabled] .form-control {
-    background-color: rgba(255, 255, 255, 0);
+.form-control[disabled],
+.form-control[readonly],
+fieldset[disabled] .form-control {
+  background-color: rgba(255, 255, 255, 0);
 }
 
 /* Groceries list*/
@@ -118,6 +113,7 @@ body.AleBody::after {
 .groceries-list-title {
   text-align: center;
   margin: 20px auto 50px;
+  font-family: "Dancing Script", serif, cursive;
 }
 
 .groceries-form {
@@ -152,3 +148,10 @@ body.AleBody::after {
   flex-direction: row;
 }
 
+#g-row {
+  border-bottom-color: transparent;
+  border-left-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
