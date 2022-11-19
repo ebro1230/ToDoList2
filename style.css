@@ -1,3 +1,106 @@
+
+.Title-Ed{
+    font-weight:700px;
+    margin-top: 4rem; 
+    color:black;
+    border: none; 
+    font-family: 'Dancing Script', serif, cursive;
+    font-size:4rem; 
+}
+div{
+    height:auto;
+    padding-left: 1rem;
+
+
+
+}
+div #tasks {
+    display:flex;
+}
+div #Title{
+    justify-content:center;
+}
+div #Plus{
+    height:auto;
+    padding-left: 2rem;
+    padding-top: 0.6rem;
+    padding-bottom: 0.6rem;
+}
+div.buttons{
+    display:flex;
+    justify-content:flex-start;
+    padding-left:1.1rem;
+    margin-left:0;
+
+}
+.btn{
+    margin-right:0.1rem;
+    margin-top:0.6rem;
+    margin-bottom: 0.6rem;
+    justify-content:flex-end;
+}
+.text{
+    overflow-wrap:break-word;
+    color:green
+}
+body {
+    background-color: rgb(255, 255, 136);
+}
+input[type=checkbox]
+{
+  /* Double-sized Checkboxes */
+  -ms-transform: scale(2); /* IE */
+  -moz-transform: scale(2); /* FF */
+  -webkit-transform: scale(2); /* Safari and Chrome */
+  -o-transform: scale(2); /* Opera */
+  padding-bottom: 1.2rem !important;
+  margin-bottom: 1.2rem !important;
+  align-self:stretch !important;
+
+}
+.row {
+    border-bottom-color: rgb(29, 185, 237);
+    border-left-color: rgb(255, 83, 83);
+    border-bottom-style: solid;
+    border-bottom-width: 0.2rem;
+    border-left-style: double;
+    border-left-width: 0.2rem;
+    align-items: center;
+    display:flex;
+}
+.form-control {
+    overflow-wrap: wrap;
+    flex-wrap: wrap;
+    overflow:auto;
+    margin-top: 1.2rem;
+    height:100%;
+}
+textarea{
+    height: 2.5rem !important;
+}
+input {
+    align-items: center;
+    flex-wrap: wrap;
+    overflow:scroll;
+}
+.form-check {
+    padding:0;
+    margin:0;
+    display:flex;
+    justify-content: center;
+    align-items:center;
+    padding-bottom: 1.4rem;
+    padding-left: 2.5rem;
+    padding-top: 0.2rem;
+}
+[id^="it"] {
+    background: rgba(255, 255, 255, 0);
+    border: rgba(255, 255, 255, 0);
+}
+.form-control[disabled], .form-control[readonly], fieldset[disabled] .form-control {
+    background-color: rgba(255, 255, 255, 0);
+}
+
 /* Groceries list*/
 
 body::after {
@@ -48,3 +151,4 @@ body::after {
 .g-todo-item {
   flex-direction: row;
 }
+
