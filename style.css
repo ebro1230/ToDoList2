@@ -43,7 +43,7 @@ div.buttons{
     color:green
 }
 body {
-    background-color: rgba(255, 255, 8, 0.634);
+    background-color: rgb(255, 255, 136);
 }
 input[type=checkbox]
 {
@@ -79,7 +79,6 @@ textarea{
 }
 input {
     align-items: center;
-    
     flex-wrap: wrap;
     overflow:scroll;
 }
@@ -92,4 +91,11 @@ input {
     padding-bottom: 1.4rem;
     padding-left: 2.5rem;
     padding-top: 0.2rem;
+}
+[id^="it"] {
+    background: rgba(255, 255, 255, 0);
+    border: rgba(255, 255, 255, 0);
+}
+.form-control[disabled], .form-control[readonly], fieldset[disabled] .form-control {
+    background-color: rgba(255, 255, 255, 0);
 }
