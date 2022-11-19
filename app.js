@@ -73,6 +73,7 @@ addItemButton.addEventListener("click", (e) => {
     if (confirm("Have you already bought this item?")) {
       doneButton.innerHTML = "Checked!";
       doneButton.style.backgroundColor = "green";
+      newToDo.style.textDecoration = "line-through";
     } else {
     }
   });
