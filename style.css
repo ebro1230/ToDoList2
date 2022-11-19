@@ -27,6 +27,7 @@ body::after {
 
 .groceries-task,
 .g-edit-button,
+.g-done-button,
 .g-delete-button {
   appearance: none;
   border: none;
@@ -35,6 +36,7 @@ body::after {
 }
 
 .g-edit-button:hover,
+.g-done-button:hover,
 .g-delete-button:hover {
   font-weight: bold;
 }

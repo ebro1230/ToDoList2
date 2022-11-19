@@ -32,6 +32,17 @@ addItemButton.addEventListener("click", (e) => {
   newToDo.style.marginBottom = "5px";
   toDoDiv.appendChild(newToDo);
 
+  const doneButton = document.createElement("button");
+  doneButton.innerHTML = "Shopping status";
+  doneButton.classList.add("g-done-button");
+  doneButton.style.fontSize = "14px";
+  doneButton.style.backgroundColor = "lightgreen";
+  doneButton.style.border = "1px solid";
+  doneButton.style.borderRadius = "5px";
+  doneButton.style.marginRight = "5px";
+  doneButton.style.marginBottom = "5px";
+  toDoDiv.appendChild(doneButton);
+
   const editButton = document.createElement("button");
   editButton.innerHTML = "Edit";
   editButton.classList.add("g-edit-button");
@@ -57,6 +68,15 @@ addItemButton.addEventListener("click", (e) => {
 
   inputedTask.value = "";
 
+  // Done task
+  doneButton.addEventListener("click", () => {
+    if (confirm("Have you already bought this item?")) {
+      doneButton.innerHTML = "Checked!";
+      doneButton.style.backgroundColor = "green";
+    } else {
+    }
+  });
+
   // Edit task
   editButton.addEventListener("click", () => {
     if (editButton.innerHTML === "Edit") {
@@ -76,6 +96,7 @@ addItemButton.addEventListener("click", (e) => {
   deleteButton.addEventListener("click", () => {
     if (confirm("Are you sure you want to delete this task?")) {
       newToDo.remove();
+      doneButton.remove();
       editButton.remove();
       deleteButton.remove();
     } else {
