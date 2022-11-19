@@ -1,3 +1,4 @@
+
 .Title-Ed{
     font-weight:700px;
     margin-top: 4rem; 
@@ -99,3 +100,55 @@ input {
 .form-control[disabled], .form-control[readonly], fieldset[disabled] .form-control {
     background-color: rgba(255, 255, 255, 0);
 }
+
+/* Groceries list*/
+
+body::after {
+  background-image: url(wallpaper.jpg);
+  content: "";
+  opacity: 0.7;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1;
+}
+
+.groceries-list-title {
+  text-align: center;
+  margin: 20px auto 50px;
+}
+
+.groceries-form {
+  margin-bottom: 50px;
+}
+
+.groceries-task-list {
+  width: 60%;
+}
+
+.groceries-task,
+.g-edit-button,
+.g-done-button,
+.g-delete-button {
+  appearance: none;
+  border: none;
+  outline: none;
+  background: none;
+}
+
+.g-edit-button:hover,
+.g-done-button:hover,
+.g-delete-button:hover {
+  font-weight: bold;
+}
+
+.g-todo {
+  display: flex;
+}
+
+.g-todo-item {
+  flex-direction: row;
+}
+
