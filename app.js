@@ -26,17 +26,31 @@ addItemButton.addEventListener("click", (e) => {
   newToDo.innerHTML = inputedTask.value;
   newToDo.classList.add("g-todo-item");
   newToDo.style.textDecoration = "none";
+  newToDo.style.display = "inline";
+  newToDo.style.fontSize = "22px";
+  newToDo.style.marginRight = "auto";
+  newToDo.style.marginBottom = "5px";
   toDoDiv.appendChild(newToDo);
 
   const editButton = document.createElement("button");
   editButton.innerHTML = "Edit";
   editButton.classList.add("g-edit-button");
+  editButton.style.fontSize = "14px";
+  editButton.style.border = "1px solid";
+  editButton.style.borderRadius = "5px";
+  editButton.style.marginRight = "5px";
+  editButton.style.marginBottom = "5px";
   toDoDiv.appendChild(editButton);
 
   const deleteButton = document.createElement("button");
   deleteButton.innerHTML = "Delete";
   deleteButton.classList.add("g-delete-button");
-  editButton.style.backgroundColor = "green";
+  deleteButton.style.fontSize = "14px";
+  deleteButton.style.border = "1px solid";
+  deleteButton.style.borderRadius = "5px";
+  deleteButton.style.marginRight = "5px";
+  deleteButton.style.marginBottom = "5px";
+  //editButton.style.backgroundColor = "green";
   toDoDiv.appendChild(deleteButton);
 
   toDoList.appendChild(toDoDiv);
@@ -54,7 +68,7 @@ addItemButton.addEventListener("click", (e) => {
     } else {
       newToDo.contentEditable = false;
       editButton.innerText = "Edit";
-      editButton.style.backgroundColor = "green";
+      editButton.style.backgroundColor = "transparent";
     }
   });
 

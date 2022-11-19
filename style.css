@@ -1,7 +1,15 @@
 /* Groceries list*/
 
-body {
-  background-color: yellow;
+body::after {
+  background-image: url(wallpaper.jpg);
+  content: "";
+  opacity: 0.7;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1;
 }
 
 .groceries-list-title {
@@ -18,15 +26,23 @@ body {
 }
 
 .groceries-task,
-.groceries-edit-button,
-.groceries-delete-button {
+.g-edit-button,
+.g-delete-button {
   appearance: none;
   border: none;
   outline: none;
   background: none;
 }
 
-.groceries-edit-button:hover,
-.groceries-delete-button:hover {
+.g-edit-button:hover,
+.g-delete-button:hover {
   font-weight: bold;
+}
+
+.g-todo {
+  display: flex;
+}
+
+.g-todo-item {
+  flex-direction: row;
 }
