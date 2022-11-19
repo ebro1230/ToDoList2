@@ -20,7 +20,7 @@
       content: "";
       position: absolute;
       height: 150px;
-      width: 1000px;
+      width: 1200px;
       background-color: var(--blue-1);
       clip-path: polygon(0 0, 100% 0, 100% 100%, 9% 97%);
       left: 0;
@@ -62,6 +62,10 @@
     .modal-backdrop.show {
       opacity: 0.8;
     }
+    .carousele-item {
+        height: 50%;
+        width: 100%;
+      }
     /* // Small devices (landscape phones, 576px and up) */
     @media (min-width: 576px) {
     }
@@ -85,10 +89,10 @@
 </head>
 <body>
   <header>
-    <div class="container-fluid">
+    <div class="container">
       <div class="row">
         <div class="col-12">
-          <div class="container px-5">
+          <div class="container-fluid px-5">
             <div class="row justify-content-between">
               <div class="col-2 pt-3">
               </div>
@@ -153,7 +157,38 @@
         </div>
       </div>
     </div>
+  
   </header>
+  <section>
+        <div class="container-fluid bg-light">
+            <div class="row">
+                <div class="col-12 g-0">
+                    <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                          <div class="carousel-item active">
+                            <img src="./image-slide/to-do-liste-feature-depo.jpg" class="d-block w-100" alt="...">
+                          </div>
+                          <div class="carousel-item">
+                            <img src="./image-slide/pexels-md-molla-2117231.jpg" class="d-block w-100" alt="...">
+                          </div>
+                          <div class="carousel-item">
+                            <img src="./image-slide/bespoke development 2480x750.jpg" class="d-block w-100" alt="...">
+                          </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+                          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                          <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+                          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                          <span class="visually-hidden">Next</span>
+                        </button>
+                      </div>
+                </div>
+            </div>
+        </div>
+  </section>
+  
   <div
     class="modal fade"
     id="searchModal"
