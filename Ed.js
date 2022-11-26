@@ -135,6 +135,7 @@ if (oldTasksJSON !== null) {
                     localStorage.setItem('Tasks', taskArrayJSON);       
                 }
             });
+            
         }
         else if (e.target.innerHTML === 'Edit') {
             let buttonId = "cb"+num;
@@ -175,6 +176,13 @@ if (oldTasksJSON !== null) {
                     });
                     document.querySelectorAll('.form-check-input').forEach(elem => {
                         elem.disabled = false;
+                    });
+                    taskArray.forEach(task => {
+                        if (task.id == num){
+                            task.taskText = textChange.value;
+                            taskArrayJSON = JSON.stringify(taskArray);
+                            localStorage.setItem('Tasks', taskArrayJSON);        
+                        }
                     });
                 }
             });
@@ -270,6 +278,7 @@ if (oldTasksJSON !== null) {
             const input = document.getElementById('it'+i);
             input.addEventListener("keypress", function(event) {
                 if (event.key === "Enter") {
+                    
                     event.preventDefault();
                     const buttonChange = document.getElementById("cb"+i);
                     buttonChange.classList.replace('btn-success', 'btn-primary');
@@ -292,7 +301,7 @@ if (oldTasksJSON !== null) {
                         elem.disabled = false;
                     });
                     taskArray.forEach(task => {
-                        if (task.id === i){
+                        if (task.id == i){
                             task.taskText = textChange.value;
                             taskArrayJSON = JSON.stringify(taskArray);
                             localStorage.setItem('Tasks', taskArrayJSON);        
