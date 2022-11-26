@@ -92,6 +92,7 @@ if (oldTasksJSON !== null) {
         firstButton.setAttribute('disabled',"");
         textChange.style.color = "grey";
         textChange.style.opacity = 0.7;
+        checkButton.setAttribute('checked', "");
     }
     else{
         textChange.style.fontStyle = "normal";
@@ -320,7 +321,7 @@ if (oldTasksJSON !== null) {
                 textChange.style.color = "grey";
                 textChange.style.opacity = 0.7;
                 taskArray.forEach(task => {
-                    if (task.id === num){
+                    if (task.id == num){
                         task.isCompleted = true;
                         taskArrayJSON = JSON.stringify(taskArray);
                         localStorage.setItem('Tasks', taskArrayJSON);        
@@ -334,7 +335,7 @@ if (oldTasksJSON !== null) {
                 textChange.style.color = "black";
                 textChange.style.opacity = 1;
                 taskArray.forEach(task => {
-                    if (task.id === num){
+                    if (task.id == num){
                         task.isCompleted = false;
                         taskArrayJSON = JSON.stringify(taskArray);
                         localStorage.setItem('Tasks', taskArrayJSON);        
