@@ -324,9 +324,7 @@ if (oldTasksJSON !== null) {
                     if (task.id == num){
                         task.isCompleted = true;
                         taskArrayJSON = JSON.stringify(taskArray);
-                        localStorage.setItem('Tasks', taskArrayJSON); 
-                        console.log(task.isCompleted);
-                        console.log("I'm checked");       
+                        localStorage.setItem('Tasks', taskArrayJSON);      
                     }
                 });
             }
@@ -340,9 +338,7 @@ if (oldTasksJSON !== null) {
                     if (task.id == num){
                         task.isCompleted = false;
                         taskArrayJSON = JSON.stringify(taskArray);
-                        localStorage.setItem('Tasks', taskArrayJSON);
-                        console.log(task.isCompleted);
-                        console.log("I'm not checked");        
+                        localStorage.setItem('Tasks', taskArrayJSON);      
                     }
                 });
             }
