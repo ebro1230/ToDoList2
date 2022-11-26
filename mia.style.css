@@ -28,18 +28,7 @@
     background: var(--dark);
     color: #FFF;
     }
-     #home-page {
-        color: var(--Pink);
-        font-size: 1.25rem;
-        font-weight: 700;
-        background-image: linear-gradient(to right, var(--Pink), var(--purple));
-        background-clip: text;
-        -webkit-text-fill-color: transparent;
-        cursor: pointer;
-        transition: 0.4s;
-
-     }
-
+    
 
     
     header {
@@ -49,7 +38,7 @@
         margin: 0 auto;
     }
     
-    header h1 {
+    .submit-form  {
         font-size: 2.5rem;
         font-weight: 300;
         color: var(--gray);
@@ -85,7 +74,7 @@
         font-size: 1.25rem;
         font-weight: 700;
         background-image: linear-gradient(to right, var(--Pink), var(--purple));
-        background-clip: text;
+        -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         cursor: pointer;
         transition: 0.4s;
@@ -160,7 +149,7 @@
 
     .task .actions .done {
         background-image: linear-gradient(to right, var(--Pink), var(--purple));
-        background-clip: text;
+        -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         
        
@@ -169,14 +158,14 @@
 
     .task .actions .edit {
         background-image: linear-gradient(to right, var(--Pink), var(--purple));
-        background-clip: text;
+        -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
   
     }
 
     .task .actions .delete {
         background-image: linear-gradient(to right, var(--Pink), var(--purple));
-        background-clip: text;
+        -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
   
     }
