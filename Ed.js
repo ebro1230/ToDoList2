@@ -86,7 +86,7 @@ if (oldTasksJSON !== null) {
     let textChange = document.getElementById("it"+i);
     textChange.value = task.taskText;
     let firstButton = document.getElementById("cb"+i);
-    if (task.isCompleted === true) {
+    if (task.isCompleted == true) {
         textChange.style.textDecoration = "line-through";
         textChange.style.fontStyle = "italic";
         firstButton.setAttribute('disabled',"");
@@ -324,7 +324,9 @@ if (oldTasksJSON !== null) {
                     if (task.id == num){
                         task.isCompleted = true;
                         taskArrayJSON = JSON.stringify(taskArray);
-                        localStorage.setItem('Tasks', taskArrayJSON);        
+                        localStorage.setItem('Tasks', taskArrayJSON); 
+                        console.log(task.isCompleted);
+                        console.log("I'm checked");       
                     }
                 });
             }
@@ -338,7 +340,9 @@ if (oldTasksJSON !== null) {
                     if (task.id == num){
                         task.isCompleted = false;
                         taskArrayJSON = JSON.stringify(taskArray);
-                        localStorage.setItem('Tasks', taskArrayJSON);        
+                        localStorage.setItem('Tasks', taskArrayJSON);
+                        console.log(task.isCompleted);
+                        console.log("I'm not checked");        
                     }
                 });
             }
