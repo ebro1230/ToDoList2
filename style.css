@@ -137,7 +137,7 @@ body.AleBody::after {
 .g-edit-button:hover,
 .g-done-button:hover,
 .g-delete-button:hover {
-  font-weight: bold;
+  text-shadow: 1px 1px 2px gray;
 }
 
 .g-todo {
@@ -154,4 +154,16 @@ body.AleBody::after {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.g-control {
+  overflow-wrap: wrap;
+  flex-wrap: wrap;
+  overflow: auto;
+  margin-top: 0.1rem;
+  height: 50%;
+}
+
+[contenteditable]:focus {
+  outline: 0px solid transparent;
 }
