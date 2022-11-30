@@ -1,7 +1,7 @@
 /* Disable and active submit button */
 const inputedTask = document.getElementById("groceries-input");
 
-inputedTask.addEventListener("input", () => {
+inputedTask.addEventListener("input", (e) => {
   const inputButton = document.querySelector("#g-addItemButton");
   inputButton.disabled = false;
 });
@@ -13,12 +13,21 @@ form.addEventListener("submit", (e) => {
 
 /* Adding a task from the form */
 
+let tasksList = JSON.parse(localStorage.getItem("tasks")) || [
+  { id: 1, taskName: "Grocery", isDone: false },
+];
+// localStorage.setItem("objects", JSON.stringify(tasksList));
+
 const addItemButton = document.querySelector("#g-addItemButton");
 const toDoList = document.querySelector(".g-todo-list");
+// const renderOnTheScreen = () => {
+//   console.log("render");
+//   const temp = `<li> ${tasksList[0].taskName} <button>DELETE</button> </>`;
+//   const list = document.getElementById("g-todo-list");
+//   list.innerHTML = list.value;
+// };
 
 addItemButton.addEventListener("click", (e) => {
-  e.preventDefault();
-
   const toDoDiv = document.createElement("div");
   toDoDiv.classList.add("g-todo");
 
@@ -68,21 +77,36 @@ addItemButton.addEventListener("click", (e) => {
 
   inputedTask.value = "";
 
+  let task1 = {
+    id: tasksList.length,
+    taskName: newToDo.innerText,
+    isDone: false,
+  };
+  tasksList.push(task1);
+  console.log(tasksList);
+
+  // Storing information in Local Storage
+  localStorage.setItem("tasks", JSON.stringify(tasksList));
+
   // Done task
   doneButton.addEventListener("click", () => {
     if (confirm("Have you already bought this item?")) {
       doneButton.innerHTML = "Checked!";
       doneButton.style.backgroundColor = "green";
       newToDo.style.textDecoration = "line-through";
+      task1.isDone = true;
     } else {
     }
+
+    localStorage.setItem("tasks", JSON.stringify(tasksList));
   });
 
   // Edit task
-  editButton.addEventListener("click", () => {
+  editButton.addEventListener("click", (e) => {
+    console.log(e.target);
     if (editButton.innerHTML === "Edit") {
       newToDo.contentEditable = true;
-      newToDo.focus();
+      // newToDo.focus();
       editButton.innerText = "Save";
       editButton.style.backgroundColor = "yellow";
       newToDo.style.textDecoration = "none";
@@ -90,7 +114,10 @@ addItemButton.addEventListener("click", (e) => {
       newToDo.contentEditable = false;
       editButton.innerText = "Edit";
       editButton.style.backgroundColor = "transparent";
+      task1.taskName = newToDo.innerText;
+      // console.log(tasksList);
     }
+    localStorage.setItem("tasks", JSON.stringify(tasksList));
   });
 
   // Delete task
@@ -100,7 +127,9 @@ addItemButton.addEventListener("click", (e) => {
       doneButton.remove();
       editButton.remove();
       deleteButton.remove();
+      tasksList.splice(tasksList.findIndex((num) => num === task1.id));
     } else {
     }
+    localStorage.setItem("objects", JSON.stringify(tasksList));
   });
 });
