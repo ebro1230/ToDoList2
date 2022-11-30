@@ -1,57 +1,75 @@
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- CSS only -->
-    
-    <title>Document</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css">
-  </head>
-  <header>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+  <title>Task List</title>
+</head>
+<header>
     <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
-      <a class="navbar-brand" href="index.html">Ed's To Do List</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav">
-          <li class="nav-item">
-            <a class="nav-link" href="index.html">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="Ed-To-Do-List.html">Ed's</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="shima.html">Shima's</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="grocerielist.html">Alessandra's</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="mia-list.html">Mia's</a>
-          </li>
-        </ul>
-      </div>
-    </nav>
-  </header>
-  <body>
-    <div class="container">
-        <div class="row">
-            <div class="col">
-                <h3>Todo list</h3>
-                <form>
-                    <div class="input-group">
-                        <span class="input-group-text">Subject</span>
-                        <textarea id="inputData" class="form-control" aria-label="With textarea"></textarea>
-                      </div>
-                    <button type="button" class="btn btn-primary mt-3" onclick="createLi()">ADD</button>
-                </form>
-                <ul id="list" class="mt-3">
-                </ul>
-            </div>
+        <a class="navbar-brand" href="index.html">Group 2's To Do Lists</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="Ed-To-Do-List.html">Ed's</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="shima.html">Shima's</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Alessandra's</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Mia's</a>
+            </li>
+          </ul>
         </div>
+      </nav>
+</header>
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="col s12">
+        <div id="main" class="card">
+          <div class="card-content">
+            <span class="card-title">Task List</span>
+            <div class="row">
+              <form id="task-form">
+                <div class="input-field col s12">
+                  <input type="text" name="task" id="task">
+                  <label for="task">New Task</label>
+                </div>
+                <input type="submit" value="Add Task" class="btn">
+              </form>
+            </div>
+          </div>
+          <div class="card-action">
+            <h5 id="task-title">Tasks</h5>
+            <div class="input-field col s12">
+              <input type="text" name="filter" id="filter">
+              <label for="filter">Filter Tasks</label>
+            </div>
+            <ul class="collection"></ul>
+            <a href="#" class="clear-tasks btn black">Clear Tasks</a>
+          </div>
+        </div>
+      </div>
     </div>
-    <script src="./shima.js"></script>
-  </body>
+  </div>
+
+  <script
+  src="https://code.jquery.com/jquery-3.2.1.js"
+  integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
+  crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+  <script src="shima.js"></script>
+</body>
 </html>
