@@ -155,11 +155,9 @@ body.AleBody::after {
   align-items: center;
   justify-content: center;
 }
-<<<<<<< HEAD
 input[type ="checkbox"] {
   overflow:hidden;
 }
-=======
 
 .g-control {
   overflow-wrap: wrap;
@@ -172,4 +170,3 @@ input[type ="checkbox"] {
 [contenteditable]:focus {
   outline: 0px solid transparent;
 }
->>>>>>> c1145c797ca574e9c0dfcd191a44f41cbd5d348f
